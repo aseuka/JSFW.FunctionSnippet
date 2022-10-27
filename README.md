@@ -18,9 +18,9 @@
 ---
 
 소스에서 사용한 Popup ( LPG-3 )<br />
-![Popup](url=https://www.codeproject.com/Articles/17502/Simple-Popup-Control) <br />
+[Popup](https://www.codeproject.com/Articles/17502/Simple-Popup-Control) <br />
 :: 파라미터 값들을 재사용 할 수 있게 팝업시키는 컨트롤<br />
 
 소스내에서 텍스트박스 ( MIT )<br />
-![ICSharpCode.AvalonEdit](url=https://github.com/icsharpcode/AvalonEdit) <br />
+[ICSharpCode.AvalonEdit](https://github.com/icsharpcode/AvalonEdit) <br />
 
