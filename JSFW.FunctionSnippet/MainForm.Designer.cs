@@ -42,6 +42,7 @@
             this.label1 = new JSFW.FunctionSnippet.Controls.Label();
             this.snippetEditControl1 = new JSFW.FunctionSnippet.Controls.SnippetEditControl();
             this.label2 = new JSFW.FunctionSnippet.Controls.Label();
+            this.btnOtherPGM_Send = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -107,9 +108,9 @@
             this.btnConvertToString.BackColor = System.Drawing.Color.ForestGreen;
             this.btnConvertToString.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConvertToString.ForeColor = System.Drawing.Color.White;
-            this.btnConvertToString.Location = new System.Drawing.Point(1168, 13);
+            this.btnConvertToString.Location = new System.Drawing.Point(1190, 13);
             this.btnConvertToString.Name = "btnConvertToString";
-            this.btnConvertToString.Size = new System.Drawing.Size(90, 22);
+            this.btnConvertToString.Size = new System.Drawing.Size(68, 22);
             this.btnConvertToString.TabIndex = 3;
             this.btnConvertToString.Text = "변환";
             this.btnConvertToString.UseVisualStyleBackColor = false;
@@ -197,11 +198,26 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "or";
             // 
+            // btnOtherPGM_Send
+            // 
+            this.btnOtherPGM_Send.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOtherPGM_Send.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnOtherPGM_Send.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOtherPGM_Send.ForeColor = System.Drawing.Color.White;
+            this.btnOtherPGM_Send.Location = new System.Drawing.Point(1027, 13);
+            this.btnOtherPGM_Send.Name = "btnOtherPGM_Send";
+            this.btnOtherPGM_Send.Size = new System.Drawing.Size(157, 22);
+            this.btnOtherPGM_Send.TabIndex = 10;
+            this.btnOtherPGM_Send.Text = "다른프로그램에 보내기";
+            this.btnOtherPGM_Send.UseVisualStyleBackColor = false;
+            this.btnOtherPGM_Send.Click += new System.EventHandler(this.btnOtherPGM_Send_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 626);
+            this.Controls.Add(this.btnOtherPGM_Send);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboTag);
             this.Controls.Add(this.label1);
@@ -220,6 +236,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "코드 조각관리";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +258,7 @@
         private Controls.Label label1;
         private System.Windows.Forms.ComboBox cboTag;
         private Controls.Label label2;
+        private System.Windows.Forms.Button btnOtherPGM_Send;
     }
 }
 

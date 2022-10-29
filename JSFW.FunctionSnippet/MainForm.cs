@@ -15,9 +15,31 @@ namespace JSFW.FunctionSnippet
     {
         SnippetManager sManager = null;
 
+        //윈도우 다른 창으로 커서 이동 x
+        //https://kdsoft-zeros.tistory.com/139
+        int WS_NOACTIVE = 134217728;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | WS_NOACTIVE;
+                return cp;
+            }
+        }
+
+
+        /// <summary>
+        /// The instance of the <see cref="IInputMessageDispatcher"/> to use for dispatching <see cref="INPUT"/> messages.
+        /// </summary>
+        private readonly IInputMessageDispatcher _messageDispatcher;
+
+
         public MainForm()
         {
             InitializeComponent();
+            _messageDispatcher = new WindowsInputMessageDispatcher();
             this.Disposed += MainForm_Disposed;
         }
 
@@ -411,6 +433,17 @@ namespace JSFW.FunctionSnippet
         private void label1_MouseUp(object sender, MouseEventArgs e)
         {
             isMouseDown = false;
+        }
+
+        private void btnOtherPGM_Send_Click(object sender, EventArgs e)
+        {
+            btnConvertToString.PerformClick(); // 클립보드 복사.
+
+            string source = Clipboard.GetText();
+            if (!string.IsNullOrWhiteSpace(source))
+            {
+                TextEntry(source.Replace("\r", ""));
+            }
         }
     }
 

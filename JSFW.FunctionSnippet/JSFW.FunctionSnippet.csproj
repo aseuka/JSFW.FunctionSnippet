@@ -132,6 +132,9 @@
     <Compile Include="Controls\SnippetEditControl.Designer.cs">
       <DependentUpon>SnippetEditControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForm%24SubFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
