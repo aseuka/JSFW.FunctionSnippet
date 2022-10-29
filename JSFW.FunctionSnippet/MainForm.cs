@@ -17,14 +17,16 @@ namespace JSFW.FunctionSnippet
 
         //윈도우 다른 창으로 커서 이동 x
         //https://kdsoft-zeros.tistory.com/139
-        int WS_NOACTIVE = 134217728;
+        // 포커스 설정 x
+        long WS_NOACTIVE = 0x8000000L;
+         
 
         protected override CreateParams CreateParams
         {
             get
             {
                 CreateParams cp = base.CreateParams;
-                cp.ExStyle = cp.ExStyle | WS_NOACTIVE;
+                cp.ExStyle = cp.ExStyle | (int)WS_NOACTIVE; 
                 return cp;
             }
         }
