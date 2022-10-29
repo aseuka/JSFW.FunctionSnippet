@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="MainForm%24SubFunction.cs">
       <SubType>Form</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
